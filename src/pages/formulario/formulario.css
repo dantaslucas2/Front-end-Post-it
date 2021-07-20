@@ -1,0 +1,52 @@
+.FormularioPage {
+    text-align: center;
+  }
+  
+  
+  .FormularioHeader {
+    background-color: #FFE400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #272727;
+  }
+
+  .Input{
+    color: #272727;
+    border-radius: 4px;
+    height: 2rem;
+    font-size: 1rem;
+    margin-bottom:20px;
+    margin-left:30px;
+    font-size: calc(10px + 2vmin);
+    text-align:center
+  }
+
+  .InputNumber{
+    color: #272727;
+    border-radius: 4px;
+    height: 2rem;
+    font-size: 1rem;
+    margin-bottom:20px;
+    margin-left:30px;
+    font-size: calc(10px + 2vmin);
+    text-align:center
+  }
+
+  .Button{
+    background-color: #ffffff; /* Green */
+    border: none;
+    color: #272727;
+    padding:0.35em 1.2em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: calc(10px + 2vmin);;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+ 
