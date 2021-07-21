@@ -1,16 +1,13 @@
 .HomePage {
-    text-align: center;
-  }
-  
-  
-  .HomeHeader {
-    background-color: #FFE400;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #272727;
-  }
-  
- 
+  text-align: center;
+}
+
+.HomeHeader {
+  background-color: #ffe400;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #272727;
+}
