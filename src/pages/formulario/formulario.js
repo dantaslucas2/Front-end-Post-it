@@ -4,31 +4,52 @@ import React, { useState, useEffect } from "react";
 
 function Formulario(props) {
   function handleSubmit() {
-    let temp = {};
-    temp.nome = document.getElementById("nome").value;
-    temp.telefone = document.getElementById("telefone").value;
-    temp.email = document.getElementById("email").value;
-    temp.modelo = document.getElementById("modelo").value;
-    temp.quantidade = document.getElementById("quantidade").value;
+    if (
+      document.getElementById("nome").value == "" ||
+      document.getElementById("nome").value == null ||
+      document.getElementById("telefone").value == "" ||
+      document.getElementById("telefone").value == null ||
+      document.getElementById("email").value == "" ||
+      document.getElementById("email").value == null ||
+      document.getElementById("modelo").value == "" ||
+      document.getElementById("modelo").value == null ||
+      document.getElementById("quantidade").value == "" ||
+      document.getElementById("quantidade").value == null
+    ) {
+      alert("Preencha todos os campos antes de submeter");
+    } else {
+      let temp = {};
+      temp.nome = document.getElementById("nome").value;
+      temp.telefone = document.getElementById("telefone").value;
+      temp.email = document.getElementById("email").value;
+      temp.modelo = document.getElementById("modelo").value;
+      temp.quantidade = document.getElementById("quantidade").value;
 
-    const requestOptions = {
-      method: "POST",
-      //headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        nome: `${temp.nome}`,
-        telefone: `${temp.telefone}`,
-        quantidade: `${temp.quantidade}`,
-        email: `${temp.email}`,
-        modelo: `${temp.modelo}`,
-      }),
-    };
-    fetch(
-      "https://1ldan5o58g.execute-api.us-east-1.amazonaws.com/prod/notes",
-      requestOptions
-    )
-      .then((data) => console.log(data))
-      .catch((error) => alert("Error"));
-    alert("Solicitação salva");
+      console.log(document.getElementById("nome"));
+      console.log(document.getElementById("telefone"));
+      console.log(document.getElementById("email"));
+      console.log(document.getElementById("modelo"));
+      console.log(document.getElementById("quantidade"));
+
+      const requestOptions = {
+        method: "POST",
+        //headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nome: `${temp.nome}`,
+          telefone: `${temp.telefone}`,
+          quantidade: `${temp.quantidade}`,
+          email: `${temp.email}`,
+          modelo: `${temp.modelo}`,
+        }),
+      };
+      fetch(
+        "https://1ldan5o58g.execute-api.us-east-1.amazonaws.com/prod/notes",
+        requestOptions
+      )
+        .then((data) => console.log(data))
+        .catch((error) => alert("Error"));
+      alert("Solicitação salva");
+    }
   }
 
   return (
